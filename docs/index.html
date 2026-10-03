@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LotoStats229 — Numéros tendance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #101f18; --bg-deep: #0a1710; --card: #182d22; --card-line: #2b4536;
+    --gold: #e6b93e; --gold-dim: #a98a3c; --red: #c0473c; --red-bg: #2b1815;
+    --text: #f1ece0; --text-dim: #a9b8ad; --text-faint: #6f8175;
+    --serif: 'Fraunces', serif; --sans: 'Space Grotesk', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg);
+    background-image: radial-gradient(circle at 15% -10%, rgba(230,185,62,0.08), transparent 40%),
+      radial-gradient(circle at 100% 20%, rgba(192,71,60,0.06), transparent 35%);
+    color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased;
+    display: flex; justify-content: center;
+  }
+  .frame { width: 100%; max-width: 460px; min-height: 100vh; background: var(--bg-deep);
+    border-left: 1px solid var(--card-line); border-right: 1px solid var(--card-line); padding-bottom: 48px; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 22px 20px 18px;
+    border-bottom: 1px solid var(--card-line); }
+  .brand { display: flex; align-items: baseline; gap: 2px; font-family: var(--serif); font-weight: 600;
+    font-size: 19px; }
+  .brand span.num { color: var(--gold); }
+  main { padding: 24px 20px 0; }
+  .eyebrow-row { display: flex; align-items: center; gap: 8px; color: var(--text-dim); font-size: 13px; margin-bottom: 10px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: 34px; line-height: 1.08; margin: 0 0 14px; max-width: 11ch; }
+  .disclaimer { background: var(--red-bg); border: 1px solid rgba(192,71,60,0.4); border-radius: 10px;
+    padding: 13px 14px; font-size: 13px; line-height: 1.5; color: #e8c5c0; display: flex; gap: 10px; margin-bottom: 26px; }
+  .disclaimer .mark { color: var(--red); font-family: var(--serif); font-weight: 700; font-size: 15px; }
+  .last-draw { display: flex; justify-content: space-between; align-items: center; padding: 14px 0;
+    border-top: 1px solid var(--card-line); border-bottom: 1px solid var(--card-line); margin-bottom: 28px;
+    font-size: 13px; color: var(--text-dim); }
+  .last-draw strong { color: var(--text); font-weight: 500; }
+  .balls { display: flex; gap: 6px; }
+  .mini-ball { width: 22px; height: 22px; border-radius: 50%; background: var(--card); border: 1px solid var(--card-line);
+    display: flex; align-items: center; justify-content: center; font-size: 10.5px; color: var(--text-dim); }
+  section { margin-bottom: 34px; }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+  .section-head h2 { font-family: var(--serif); font-weight: 600; font-size: 19px; margin: 0; }
+  .section-head .tag { font-size: 11px; color: var(--text-faint); }
+  .trend-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+  .trend-ball { aspect-ratio: 1; border-radius: 50%; background: linear-gradient(160deg, #f0cf6e, var(--gold));
+    color: #21170a; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 17px; }
+  .card { background: var(--card); border-left: 2px solid var(--card-line); padding: 13px 16px; margin-bottom: 8px; border-radius: 2px; }
+  .card.accent { border-left-color: var(--gold); }
+  .ecart-row { display: flex; align-items: center; gap: 12px; }
+  .ecart-num { font-weight: 700; font-size: 16px; width: 26px; }
+  .ecart-bar-wrap { flex: 1; height: 6px; background: var(--bg); border-radius: 3px; overflow: hidden; }
+  .ecart-bar { height: 100%; background: var(--gold-dim); border-radius: 3px; }
+  .ecart-val { font-size: 11.5px; color: var(--text-dim); width: 64px; text-align: right; }
+  .combo-row { display: flex; justify-content: space-between; align-items: center; }
+  .combo-nums { display: flex; gap: 6px; font-weight: 600; font-size: 14px; }
+  .combo-count { font-size: 11px; color: var(--text-faint); }
+  footer { padding: 20px 20px 0; border-top: 1px solid var(--card-line); }
+  footer p { font-size: 11.5px; line-height: 1.6; color: var(--text-faint); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="brand">LotoStats<span class="num">229</span></div>
+  </header>
+  <main>
+    <div class="eyebrow-row"><span class="dot"></span> Mis à jour automatiquement</div>
+    <h1>Numéros tendance</h1>
+    <div class="disclaimer">
+      <span class="mark">!</span>
+      <span>Chaque numéro a exactement 5,6&nbsp;% de chances de sortir à chaque tirage. Ces tendances décrivent le passé, elles ne changent pas vos chances au tirage suivant. Jouez avec modération.</span>
+    </div>
+    <div class="last-draw">
+      <span>Dernier tirage <strong>Digital 8H</strong> · 2026-10-03</span>
+      <div class="balls"><div class="mini-ball">2</div><div class="mini-ball">5</div><div class="mini-ball">30</div><div class="mini-ball">55</div><div class="mini-ball">62</div></div>
+    </div>
+    <section>
+      <div class="section-head"><h2>À surveiller</h2><span class="tag">Sur 309 tirages</span></div>
+      <div class="trend-grid"><div class="trend-ball">44</div><div class="trend-ball">33</div><div class="trend-ball">18</div><div class="trend-ball">42</div><div class="trend-ball">72</div></div>
+    </section>
+    <section>
+      <div class="section-head"><h2>Numéros en retard</h2></div>
+      <div class="card"><div class="ecart-row">
+            <span class="ecart-num">64</span>
+            <div class="ecart-bar-wrap"><div class="ecart-bar" style="width:100%"></div></div>
+            <span class="ecart-val">127 tirages</span>
+        </div></div><div class="card"><div class="ecart-row">
+            <span class="ecart-num">7</span>
+            <div class="ecart-bar-wrap"><div class="ecart-bar" style="width:86%"></div></div>
+            <span class="ecart-val">86 tirages</span>
+        </div></div><div class="card"><div class="ecart-row">
+            <span class="ecart-num">26</span>
+            <div class="ecart-bar-wrap"><div class="ecart-bar" style="width:84%"></div></div>
+            <span class="ecart-val">84 tirages</span>
+        </div></div><div class="card"><div class="ecart-row">
+            <span class="ecart-num">27</span>
+            <div class="ecart-bar-wrap"><div class="ecart-bar" style="width:75%"></div></div>
+            <span class="ecart-val">75 tirages</span>
+        </div></div><div class="card"><div class="ecart-row">
+            <span class="ecart-num">23</span>
+            <div class="ecart-bar-wrap"><div class="ecart-bar" style="width:74%"></div></div>
+            <span class="ecart-val">74 tirages</span>
+        </div></div>
+    </section>
+    <section>
+      <div class="section-head"><h2>Duos fréquents · 2 Nap</h2></div>
+      <div class="card accent"><div class="combo-row">
+            <div class="combo-nums">3 · 21</div>
+            <span class="combo-count">sorti ensemble 5 fois</span>
+        </div></div><div class="card accent"><div class="combo-row">
+            <div class="combo-nums">55 · 65</div>
+            <span class="combo-count">sorti ensemble 5 fois</span>
+        </div></div><div class="card accent"><div class="combo-row">
+            <div class="combo-nums">17 · 19</div>
+            <span class="combo-count">sorti ensemble 5 fois</span>
+        </div></div>
+    </section>
+    <section>
+      <div class="section-head"><h2>Trios fréquents · 3 Nap</h2></div>
+      <div class="card accent"><div class="combo-row">
+            <div class="combo-nums">44 · 77 · 80</div>
+            <span class="combo-count">3 fois</span>
+        </div></div><div class="card accent"><div class="combo-row">
+            <div class="combo-nums">9 · 62 · 89</div>
+            <span class="combo-count">3 fois</span>
+        </div></div>
+    </section>
+  </main>
+  <footer>
+    <p>Site indépendant d'analyse statistique. Non affilié à la Loterie Nationale du Bénin. Jeu réservé aux 18 ans et plus — jouez de façon responsable.</p>
+  </footer>
+</div>
+</body>
+</html>
