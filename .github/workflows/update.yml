@@ -1,0 +1,115 @@
+bash
+
+cat /home/claude/lotostats229/.github/workflows/update.yml
+Sortie
+
+name: Mise à jour LotoStats229
+
+on:
+  schedule:
+    # Déclenché un peu après chaque heure de tirage (UTC+1 = heure du Bénin,
+    # donc on vise 00h10, 08h10, 11h10, 14h10, 18h10, 20h10 heure locale).
+    # GitHub Actions utilise l'heure UTC ; le Bénin est en UTC+1 toute l'année
+    # (pas d'heure d'été), donc on soustrait 1h ici.
+    - cron: "10 23 * * *"  # 00h10 Bénin
+    - cron: "10 7 * * *"   # 08h10 Bénin
+    - cron: "10 10 * * *"  # 11h10 Bénin
+    - cron: "10 13 * * *"  # 14h10 Bénin
+    - cron: "10 17 * * *"  # 18h10 Bénin
+    - cron: "10 19 * * *"  # 20h10 Bénin
+  workflow_dispatch: {}  # permet de le lancer manuellement depuis GitHub pour tester
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloner le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: |
+          pip install playwright requests
+          playwright install --with-deps chromium
+
+      - name: Récupérer les nouveaux tirages
+        run: python scripts/scraper.py
+
+      - name: Calculer les tendances
+        run: python scripts/analyze.py
+
+      - name: Générer le site
+        run: python scripts/generate_site.py
+
+      - name: Publier sur Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_post.py
+
+      - name: Commiter les changements
+        run: |
+          git config user.name "LotoStats229 Bot"
+          name: Mise à jour LotoStats229
+
+on:
+  schedule:
+    # Déclenché un peu après chaque heure de tirage (UTC+1 = heure du Bénin,
+    # donc on vise 00h10, 08h10, 11h10, 14h10, 18h10, 20h10 heure locale).
+    # GitHub Actions utilise l'heure UTC ; le Bénin est en UTC+1 toute l'année
+    # (pas d'heure d'été), donc on soustrait 1h ici.
+    - cron: "10 23 * * *"  # 00h10 Bénin
+    - cron: "10 7 * * *"   # 08h10 Bénin
+    - cron: "10 10 * * *"  # 11h10 Bénin
+    - cron: "10 13 * * *"  # 14h10 Bénin
+    - cron: "10 17 * * *"  # 18h10 Bénin
+    - cron: "10 19 * * *"  # 20h10 Bénin
+  workflow_dispatch: {}  # permet de le lancer manuellement depuis GitHub pour tester
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloner le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: |
+          pip install playwright requests
+          playwright install --with-deps chromium
+
+      - name: Récupérer les nouveaux tirages
+        run: python scripts/scraper.py
+
+      - name: Calculer les tendances
+        run: python scripts/analyze.py
+
+      - name: Générer le site
+        run: python scripts/generate_site.py
+
+      - name: Publier sur Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/telegram_post.py
+
+      - name: Commiter les changements
+        run: |
+          git config user.name "LotoStats229 Bot"
+          git config user.email "bot@lotostats229.local"
+          git add data/ site/
+          git diff --quiet --cached || git commit -m "Mise à jour automatique des tendances"
+          git push
+          git config user.email "bot@lotostats229.local"
+          git add data/ site/
+          git diff --quiet --cached || git commit -m "Mise à jour automatique des tendances"
+          git push
