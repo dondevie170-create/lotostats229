@@ -1,87 +1,111 @@
 {
-  "total_tirages": 270,
+  "total_tirages": 307,
   "dernier_tirage": {
     "date": "2026-10-03",
-    "heure": "00H",
+    "heure": "8H",
     "type": "Digital",
     "numeros": [
-      40,
-      59,
-      83,
-      86,
-      88
+      2,
+      5,
+      30,
+      55,
+      62
     ]
   },
   "doubles_actifs": [
-    88
+    55
   ],
   "a_surveiller": [
-    17,
-    42,
-    11,
     44,
-    85
+    33,
+    18,
+    42,
+    72
   ],
   "numeros_en_retard": [
     {
       "numero": 64,
-      "ecart": 101
+      "ecart": 125
     },
     {
       "numero": 7,
-      "ecart": 70
+      "ecart": 84
     },
     {
       "numero": 26,
-      "ecart": 68
-    },
-    {
-      "numero": 62,
-      "ecart": 67
+      "ecart": 82
     },
     {
       "numero": 27,
-      "ecart": 65
+      "ecart": 73
+    },
+    {
+      "numero": 23,
+      "ecart": 72
     }
   ],
   "duos_frequents": [
     {
       "paire": [
-        58,
-        72
+        3,
+        21
       ],
       "fois": 5
     },
     {
       "paire": [
-        19,
-        72
+        55,
+        65
       ],
-      "fois": 4
+      "fois": 5
     },
     {
       "paire": [
-        29,
-        72
+        17,
+        19
       ],
-      "fois": 4
+      "fois": 5
     },
     {
       "paire": [
-        10,
-        36
+        80,
+        89
       ],
-      "fois": 4
+      "fois": 5
     },
     {
       "paire": [
-        6,
-        50
+        24,
+        44
       ],
-      "fois": 4
+      "fois": 5
     }
   ],
   "trios_frequents": [
+    {
+      "trio": [
+        44,
+        77,
+        80
+      ],
+      "fois": 3
+    },
+    {
+      "trio": [
+        9,
+        62,
+        89
+      ],
+      "fois": 3
+    },
+    {
+      "trio": [
+        7,
+        9,
+        62
+      ],
+      "fois": 3
+    },
     {
       "trio": [
         19,
@@ -95,30 +119,6 @@
         29,
         42,
         72
-      ],
-      "fois": 2
-    },
-    {
-      "trio": [
-        44,
-        77,
-        80
-      ],
-      "fois": 2
-    },
-    {
-      "trio": [
-        6,
-        45,
-        50
-      ],
-      "fois": 2
-    },
-    {
-      "trio": [
-        6,
-        50,
-        62
       ],
       "fois": 2
     }
