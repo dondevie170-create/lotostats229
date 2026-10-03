@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 TENDANCES_FILE = Path(__file__).parent.parent / "data" / "tendances.json"
-OUT_FILE = Path(__file__).parent.parent / "site" / "index.html"
+OUT_FILE = Path(__file__).parent.parent / "docs" / "index.html"
 
 TEMPLATE = """<!DOCTYPE html>
 <html lang="fr">
