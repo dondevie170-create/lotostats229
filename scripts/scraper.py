@@ -14,6 +14,7 @@ Si le site change complètement sa structure de texte, cette regex devra
 """
 
 import json
+import os
 import re
 import sys
 from datetime import datetime
@@ -101,3 +102,8 @@ if __name__ == "__main__":
 
     added = merge_and_save(found)
     print(f"{len(found)} tirages lus sur la page, {added} nouveaux ajoutés à la base.")
+
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a") as f:
+            f.write(f"added={added}\n")
