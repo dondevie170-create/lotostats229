@@ -46,6 +46,6 @@ jobs:
         run: |
           git config user.name "LotoStats229 Bot"
           git config user.email "bot@lotostats229.local"
-          git add data/ site/
+          git add data/ docs/
           git diff --quiet --cached || git commit -m "Mise a jour automatique des tendances"
           git push
