@@ -3745,6 +3745,18 @@
   },
   {
     "date": "2026-10-04",
+    "heure": "18H",
+    "type": "Star",
+    "numeros": [
+      2,
+      6,
+      8,
+      25,
+      72
+    ]
+  },
+  {
+    "date": "2026-10-04",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
