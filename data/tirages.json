@@ -3697,6 +3697,18 @@
   },
   {
     "date": "2026-10-03",
+    "heure": "20H",
+    "type": "Digital",
+    "numeros": [
+      3,
+      5,
+      22,
+      44,
+      45
+    ]
+  },
+  {
+    "date": "2026-10-03",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
