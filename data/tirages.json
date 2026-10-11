@@ -4261,6 +4261,18 @@
   },
   {
     "date": "2026-10-11",
+    "heure": "20H",
+    "type": "Digital",
+    "numeros": [
+      2,
+      22,
+      63,
+      79,
+      88
+    ]
+  },
+  {
+    "date": "2026-10-11",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
