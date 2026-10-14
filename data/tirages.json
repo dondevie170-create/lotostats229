@@ -4465,6 +4465,18 @@
   },
   {
     "date": "2026-10-14",
+    "heure": "18H",
+    "type": "Star",
+    "numeros": [
+      14,
+      65,
+      70,
+      76,
+      90
+    ]
+  },
+  {
+    "date": "2026-10-14",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
