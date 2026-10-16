@@ -1,5 +1,5 @@
 {
-  "total_tirages": 383,
+  "total_tirages": 384,
   "dernier_tirage": {
     "date": "2026-10-16",
     "heure": "8H",
@@ -14,32 +14,32 @@
   },
   "doubles_actifs": [],
   "a_surveiller": [
-    2,
-    69,
     11,
+    2,
     21,
+    69,
     3
   ],
   "numeros_en_retard": [
     {
       "numero": 68,
-      "ecart": 85
+      "ecart": 86
     },
     {
       "numero": 87,
-      "ecart": 66
+      "ecart": 67
     },
     {
       "numero": 52,
-      "ecart": 62
-    },
-    {
-      "numero": 71,
-      "ecart": 50
+      "ecart": 63
     },
     {
       "numero": 41,
-      "ecart": 48
+      "ecart": 49
+    },
+    {
+      "numero": 12,
+      "ecart": 46
     }
   ],
   "duos_frequents": [
