@@ -1,45 +1,45 @@
 {
-  "total_tirages": 382,
+  "total_tirages": 383,
   "dernier_tirage": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
-      18,
-      25,
+      23,
       30,
-      53,
-      69
+      34,
+      86,
+      90
     ]
   },
   "doubles_actifs": [],
   "a_surveiller": [
-    9,
-    72,
-    1,
-    6,
-    35
+    2,
+    69,
+    11,
+    21,
+    3
   ],
   "numeros_en_retard": [
     {
       "numero": 68,
-      "ecart": 84
+      "ecart": 85
     },
     {
       "numero": 87,
-      "ecart": 65
+      "ecart": 66
     },
     {
       "numero": 52,
-      "ecart": 61
+      "ecart": 62
     },
     {
       "numero": 71,
-      "ecart": 49
+      "ecart": 50
     },
     {
       "numero": 41,
-      "ecart": 47
+      "ecart": 48
     }
   ],
   "duos_frequents": [
