@@ -5041,6 +5041,18 @@
   },
   {
     "date": "2026-10-22",
+    "heure": "18H",
+    "type": "Fortune",
+    "numeros": [
+      1,
+      8,
+      26,
+      40,
+      49
+    ]
+  },
+  {
+    "date": "2026-10-22",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
