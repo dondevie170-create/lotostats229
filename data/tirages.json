@@ -5053,6 +5053,18 @@
   },
   {
     "date": "2026-10-22",
+    "heure": "20H",
+    "type": "Digital",
+    "numeros": [
+      22,
+      35,
+      46,
+      47,
+      48
+    ]
+  },
+  {
+    "date": "2026-10-22",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
