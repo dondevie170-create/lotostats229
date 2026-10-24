@@ -5161,6 +5161,18 @@
   },
   {
     "date": "2026-10-24",
+    "heure": "00H",
+    "type": "Digital",
+    "numeros": [
+      22,
+      26,
+      31,
+      39,
+      78
+    ]
+  },
+  {
+    "date": "2026-10-24",
     "heure": "11H",
     "type": "Star",
     "numeros": [
