@@ -5773,6 +5773,18 @@
   },
   {
     "date": "2026-11-01",
+    "heure": "20H",
+    "type": "Digital",
+    "numeros": [
+      1,
+      9,
+      24,
+      41,
+      53
+    ]
+  },
+  {
+    "date": "2026-11-01",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
