@@ -1,47 +1,45 @@
 {
-  "total_tirages": 508,
+  "total_tirages": 511,
   "dernier_tirage": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
-      11,
-      14,
-      36,
-      78,
-      82
+      18,
+      25,
+      38,
+      70,
+      84
     ]
   },
-  "doubles_actifs": [
-    11
-  ],
+  "doubles_actifs": [],
   "a_surveiller": [
-    44,
+    42,
+    9,
+    50,
     33,
-    31,
-    90,
-    69
+    55
   ],
   "numeros_en_retard": [
     {
       "numero": 43,
-      "ecart": 58
+      "ecart": 61
     },
     {
       "numero": 59,
-      "ecart": 50
-    },
-    {
-      "numero": 56,
-      "ecart": 47
+      "ecart": 53
     },
     {
       "numero": 85,
-      "ecart": 41
+      "ecart": 44
     },
     {
       "numero": 17,
-      "ecart": 39
+      "ecart": 42
+    },
+    {
+      "numero": 62,
+      "ecart": 38
     }
   ],
   "duos_frequents": [
@@ -68,15 +66,15 @@
     },
     {
       "paire": [
-        57,
-        59
+        25,
+        70
       ],
       "fois": 6
     },
     {
       "paire": [
-        55,
-        65
+        57,
+        59
       ],
       "fois": 6
     }
