@@ -6565,6 +6565,18 @@
   },
   {
     "date": "2026-11-12",
+    "heure": "20H",
+    "type": "Digital",
+    "numeros": [
+      29,
+      40,
+      74,
+      81,
+      84
+    ]
+  },
+  {
+    "date": "2026-11-12",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
