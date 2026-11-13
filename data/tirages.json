@@ -6625,6 +6625,18 @@
   },
   {
     "date": "2026-11-13",
+    "heure": "18H",
+    "type": "Fortune",
+    "numeros": [
+      12,
+      52,
+      59,
+      84,
+      89
+    ]
+  },
+  {
+    "date": "2026-11-13",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
