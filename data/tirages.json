@@ -6709,6 +6709,18 @@
   },
   {
     "date": "2026-11-14",
+    "heure": "20H",
+    "type": "Digital",
+    "numeros": [
+      30,
+      65,
+      75,
+      83,
+      84
+    ]
+  },
+  {
+    "date": "2026-11-14",
     "heure": "8H",
     "type": "Digital",
     "numeros": [
