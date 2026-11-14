@@ -6673,6 +6673,18 @@
   },
   {
     "date": "2026-11-14",
+    "heure": "00H",
+    "type": "Digital",
+    "numeros": [
+      26,
+      38,
+      40,
+      60,
+      61
+    ]
+  },
+  {
+    "date": "2026-11-14",
     "heure": "11H",
     "type": "Star",
     "numeros": [
