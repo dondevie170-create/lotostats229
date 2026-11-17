@@ -6817,6 +6817,18 @@
   },
   {
     "date": "2026-11-16",
+    "heure": "00H",
+    "type": "Digital",
+    "numeros": [
+      11,
+      26,
+      43,
+      50,
+      85
+    ]
+  },
+  {
+    "date": "2026-11-16",
     "heure": "11H",
     "type": "Fortune",
     "numeros": [
