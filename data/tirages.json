@@ -7033,6 +7033,18 @@
   },
   {
     "date": "2026-11-19",
+    "heure": "00H",
+    "type": "Digital",
+    "numeros": [
+      17,
+      19,
+      40,
+      48,
+      71
+    ]
+  },
+  {
+    "date": "2026-11-19",
     "heure": "11H",
     "type": "Fortune",
     "numeros": [
