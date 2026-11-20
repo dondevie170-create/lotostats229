@@ -1,5 +1,5 @@
 {
-  "total_tirages": 595,
+  "total_tirages": 596,
   "dernier_tirage": {
     "date": "2026-11-20",
     "heure": "8H",
@@ -25,23 +25,23 @@
   "numeros_en_retard": [
     {
       "numero": 34,
-      "ecart": 75
-    },
-    {
-      "numero": 24,
-      "ecart": 66
+      "ecart": 76
     },
     {
       "numero": 33,
-      "ecart": 61
+      "ecart": 62
     },
     {
       "numero": 32,
-      "ecart": 60
+      "ecart": 61
     },
     {
-      "numero": 14,
-      "ecart": 58
+      "numero": 27,
+      "ecart": 57
+    },
+    {
+      "numero": 77,
+      "ecart": 53
     }
   ],
   "duos_frequents": [
